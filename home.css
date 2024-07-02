@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: rgba(0, 0, 0, 0.699);
+  --light-color: rgba(165, 147, 42, 0.897);
+  --dark-color: #111;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Example CSS to style FontAwesome icons */
+.fa {
+  color: black; /* Change icon color */
+  margin-right: 8px; /* Add space between icon and text */
+}
+
+.navbar .fa {
+  font-size: 16px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 10px 15px;
+  display: block;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.navbar ul li a:hover {
+  color: var(--light-color);
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background-color: var(--light-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
