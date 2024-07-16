@@ -81,6 +81,10 @@ img {
 }
 
 .about .container {
+  background: url('./images/insurance-2.jpg') no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+
 }
 
 .about .hero-content {
