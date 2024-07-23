@@ -81,9 +81,26 @@ img {
 }
 
 .about .container {
-  background: url('./images/insurance-2.jpg') no-repeat;
-  background-size: contain;
-  background-position: center bottom;
+  position: relative;
+  background: url('../images/insurance.jpg') no-repeat center center/cover;
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+.about .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.37);
+  z-index: 0;
+}
+
+.about .container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .about .hero-content {
@@ -91,7 +108,12 @@ img {
 }
 
 .about .hero-text {
+  color: #fff;
   width: 70%;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
   margin-bottom: 20px;
 }
 
@@ -175,7 +197,7 @@ img {
 }
 .brokers-grid .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -320,4 +342,69 @@ img {
 .bg-dark {
   background: var(--dark-color);
   color: #fff;
+}
+
+/* Hambuger Button */
+.hambuger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hambuger-btn .hambuger-line {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin: 6px 0;
+}
+/* Mobile Menu */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hambuger-btn {
+    display: block;
+  }
+  .about .container .hero-content {
+    width: 100%;
+    /* align-items: center; */
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-heading {
+    font-size: 25px;
+  }
+
+  .services-section .service-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 500px) {
 }
