@@ -217,6 +217,35 @@ img {
   gap: 20px;
 }
 
+/* Management Team */
+
+.management-team {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Gap between cards */
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.management-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.management-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.management-card a {
+  font-size: 20px;
+}
+
 /* Contact Section */
 
 .contact-container .container {
@@ -442,6 +471,11 @@ img {
   }
 
   .brokers-grid .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .management-team {
     display: flex;
     flex-direction: column;
   }
